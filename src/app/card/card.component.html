@@ -1,0 +1,12 @@
+<div class="card">
+  <img class="image" src="{{dataEntrante?.img}}" alt="">
+  <div class="wrapper-text">
+    <div class="title">{{dataEntrante?.title}}</div>
+    <div class="sub-title">{{dataEntrante?.subtitle}}</div>
+    <div>
+      <button class="favorite btn btn-outline-warning" (click)="agregarFavorito()">Add Favorito</button>
+      <button [routerLink]="['/','detail',dataEntrante.id ]" class="favorite btn btn-outline-warning">Ver</button>
+    </div>
+  </div>
+</div>
+

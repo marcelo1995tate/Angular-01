@@ -1,0 +1,21 @@
+<div>
+  <h4>Favoritos</h4>
+</div>
+<div class="divider"></div>
+<div>
+  <ul>
+    <li *ngFor="let favorito of listaDeFavoritos">
+      <div [routerLink]="['/','detail',favorito.data.id ]">
+      <div class="card">
+        <img class="image" src="{{favorito.data.img}}" alt="">
+      </div>
+      <div class="title-inside">
+        <div class="title">
+          {{favorito.data.title}}
+        </div>
+      </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
