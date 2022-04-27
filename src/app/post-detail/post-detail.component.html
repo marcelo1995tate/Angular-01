@@ -1,2 +1,7 @@
 {{pelicula|json}}
 
+<form (ngSubmit)="enviarComentarios()" [formGroup]="forms">
+  <input type="text" formControlName="name" >
+  <input type="text" formControlName="addres">
+  <button type="submit">Enviar</button>
+</form>
