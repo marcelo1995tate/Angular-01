@@ -1,7 +1,25 @@
-{{pelicula|json}}
+<div>
+  <ul>
+    <li><h1>{{pelicula?.title| titlecase}} #{{pelicula?.id| number}}</h1></li>
+    <li><h2>{{pelicula?.subtitle}}</h2></li>
+    <li><img class="image" src="{{pelicula?.img}}" width="200px" alt="200px">
+    </li>
+  </ul>
+</div>
+<div>
+  <div>
+    <h3>Comentarios</h3>
+    <ul>
+      <li *ngFor="let coment of pelicula.comentarios">{{coment.comentario}}</li>
+    </ul>
+  </div>
+  <div>
+    <form (ngSubmit)="enviarComentarios()" [formGroup]="forms">
+      <input type="text" formControlName="comentario">
 
-<form (ngSubmit)="enviarComentarios()" [formGroup]="forms">
-  <input type="text" formControlName="name" >
-  <input type="text" formControlName="addres">
-  <button type="submit">Enviar</button>
-</form>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+

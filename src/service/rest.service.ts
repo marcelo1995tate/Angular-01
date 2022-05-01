@@ -11,5 +11,7 @@ export class RestService {
 public get (url:string){
     return this.http.get(url);
 }
-
+  public post (url:string,body: object){
+    return this.http.post(url,body);
+  }
 }
