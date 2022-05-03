@@ -11,6 +11,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { HomeComponent } from './home/home.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { ListViewComponent } from './list-view/list-view.component';
+import {NgxDatatableModule} from "@swimlane/ngx-datatable";
 
 @NgModule({
   declarations: [
@@ -20,13 +22,15 @@ import {ReactiveFormsModule} from "@angular/forms";
     CardComponent,
     FooterComponent,
     PostDetailComponent,
-    HomeComponent
+    HomeComponent,
+    ListViewComponent
   ],
     imports: [
         BrowserModule,
         HttpClientModule,
         AppRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxDatatableModule
     ],
   providers: [],
   bootstrap: [AppComponent]

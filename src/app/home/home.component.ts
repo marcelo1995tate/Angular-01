@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
     this.cargarData();
   }
 
-  public cargarData() {
+  public cargarData():void {
 
     this.RestService.get('http://localhost:8080/data').subscribe(respuesta => {
       console.log("recibiendo REST",respuesta);
