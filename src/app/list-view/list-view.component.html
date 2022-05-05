@@ -1,0 +1,26 @@
+<div>
+  <ngx-datatable
+    class="material"
+    [rows]="data"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+  >
+  </ngx-datatable>
+
+  <ng-template #hdrTpl let-column="column">{{ column.name }}</ng-template>
+
+  <ng-template #titleTmpl let-row="row" let-column="column" let-value="value">
+    <div [routerLink]="['/','detail',row?.id]">
+      <div class="title">{{row?.id}}</div>
+      <img [src]="value" *ngIf="columns.name==='img'" alt="100"width="100">
+      <ng-container *ngIf="columns.name!='img'">{{value}}</ng-container>
+      <div class="title">{{row?.title}}</div>
+      <div class="subtitle">{{row?.subtitle}}</div>
+      <div class="view">{{row?.view}}</div>
+      <div class="comentarios">{{row?.comentario}}</div>
+    </div>
+  </ng-template>
+</div>
